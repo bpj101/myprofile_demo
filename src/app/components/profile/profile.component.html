@@ -1,0 +1,16 @@
+<header>
+  <h1 class="profile-title">My Profile</h1>
+  <img class="menu-icon" src="/assets/img/menuIcon.jpg" alt="">
+</header>
+<main class=" profile-container">
+  <div class="wrapper" *ngIf="user">
+    <img class="avatar-circle" [src]="'/assets/' + user.avatarpath" alt="user avatar">
+    <section class="info">
+      <div><span class="contact-label">Name: </span><span class="contact-info">{{user.firstName}} {{user.lastName}}</span></div>
+      <div><span class="contact-label">Email: </span><span class="contact-info">{{user.email}}</span></div>
+      <div><span class="contact-label">Phone: </span><span class="contact-info">{{user.phone}}</span></div>
+      <div><span class="contact-label">Mobile: </span><span class="contact-info">{{user.mobile}}</span></div>
+      <div><span class="contact-label">Location: </span><span class="contact-info">{{user.location}}</span></div>
+    </section>
+  </div>
+</main>

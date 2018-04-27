@@ -1,0 +1,8 @@
+<div class="stats">
+  <div *ngFor="let stat of stats; let i = index">
+    <div [class]="'stat'+(i+1)">
+      <div class="stats-total text-center">{{stat.total | number}}</div>
+      <div class="stats-label text-center">{{stat.title}}</div>
+    </div>
+  </div>
+</div>

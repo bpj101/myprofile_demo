@@ -1,0 +1,21 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-columns: minmax(auto, auto);
+  grid-template-rows: 1fr;
+}
+
+.stat1 {
+  padding: 25px 25px 25px 75px;
+  grid-column: 2/2
+}
+
+.stat2 {
+  padding: 25px;
+  grid-column: 3/3
+}
+
+.stat3 {
+  padding: 25px;
+  grid-column: 4/4
+}

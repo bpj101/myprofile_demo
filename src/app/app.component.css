@@ -1,0 +1,25 @@
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 25px 0;
+  font-size: 14px;
+  line-height: 1.25em;
+}
+
+.f1 {
+  grid-column: 2
+}
+
+.f2 {
+  grid-column: 3
+}
+
+a {
+  color: #8F9295;
+  text-decoration: none;
+}
+
+.active-link {
+  text-decoration: underline;
+  text-decoration-color: #603A87;
+}

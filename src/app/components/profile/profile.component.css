@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-columns: min-content;
+  grid-auto-rows: max-content;
+  padding: 25px;
+}
+
+.avatar-circle {
+  grid-column: 1;
+  width: 75px;
+  height: auto;
+  border-radius: 50%;
+  border: .5px solid #cccbcb;
+}
+
+.info {
+  grid-column: 2;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+header h1 {
+  grid-column: 1;
+}
+
+.menu-icon {
+  grid-column: 2;
+  display: inline;
+}

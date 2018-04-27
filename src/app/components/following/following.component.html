@@ -1,0 +1,25 @@
+<section>
+  <div class="section-header">{{followingTitle}}</div>
+  <main>
+    <ul *ngFor="let each of followees; let i = index;">
+      <ng-template [ngIf]="!showAll">
+        <li *ngIf="i < 5" class="section-container">
+          <a href="each.followee.url">
+            <img class="avatar-size avatar-circle" [src]="'/assets/' + each.followee.avatar" alt="Followee Avatar">
+            <span>{{each.followee.userDisplayName}}</span>
+          </a>
+        </li>
+      </ng-template>
+      <ng-template [ngIf]="showAll">
+        <li class="section-container">
+          <a href="each.followee.url">
+            <img class="avatar-size avatar-circle" [src]="'/assets/' + each.followee.avatar" alt="Followee Avatar">
+            <span>{{each.followee.userDisplayName}}</span>
+          </a>
+        </li>
+      </ng-template>
+    </ul>
+  </main>
+  <div class="showAll" *ngIf="!showAll" (click)="onShowAll()">SEE ALL ></div>
+  <div class="showAll" *ngIf="showAll" (click)="onShowAll()">SEE LESS ></div>
+</section>
