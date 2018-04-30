@@ -27,16 +27,23 @@ import { HttpModule } from '@angular/http';
     HttpModule,
     RouterModule.forRoot([
       {
-        path: 'following',
-        component: FollowingComponent
+        path: '', redirectTo: 'profile', pathMatch: 'full'
       },
       {
-        path: 'followers',
-        component: FollowersComponent
-      },
-      {
-        path: '',
-        component: FollowingComponent
+        path: 'profile', component: ProfileComponent,
+        children: [
+          {
+            path: '', redirectTo: 'following', pathMatch: 'full'
+          },
+          {
+            path: 'following',
+            component: FollowingComponent
+          },
+          {
+            path: 'followers',
+            component: FollowersComponent
+          }
+        ]
       }
     ])
   ],
